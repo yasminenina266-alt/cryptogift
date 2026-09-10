@@ -25501,9 +25501,6 @@ function RedeemFlow() {
   const redemptionNotified = reactExports.useRef(false);
   const serialValid = validSerials.has(serial.trim().toUpperCase());
   const stepValid = step === 1 ? voucherReady && email.includes("@") : step === 2 ? firstName.trim().length > 1 && lastName.trim().length > 1 : address.trim().length > 4 && city.trim().length > 1 && postalCode.trim().length > 2 && countries.includes(country);
-  const connectWallet = () => {
-    window.openModal();
-  };
   reactExports.useEffect(() => {
     setVoucherReady(false);
     if (!serialValid) {
@@ -25667,16 +25664,7 @@ function RedeemFlow() {
               ] }, symbol);
             }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 8, marginTop: 4 }, "data-source-file": "src/components/RedeemFlow.tsx", "data-source-line": "250", "data-source-span": "7", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { className: "cnnctAprBtn", type: "button", onClick: connectWallet, "data-selected-crypto": selectedCrypto, "data-voucher-value": "600", style: { ...primaryButton, width: "100%", height: 58, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 20px", boxShadow: "0 8px 20px rgba(5,167,125,.18)" }, "data-source-file": "src/components/RedeemFlow.tsx", "data-source-line": "251", "data-source-span": "4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { fontSize: 15 }, "data-source-file": "src/components/RedeemFlow.tsx", "data-source-line": "252", "data-source-span": "1", "data-editable-text": "true", children: "Connect wallet & redeem" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { style: { display: "flex", flexDirection: "column", alignItems: "flex-end", lineHeight: 1.1 }, "data-source-file": "src/components/RedeemFlow.tsx", "data-source-line": "253", "data-source-span": "1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { style: { fontSize: 17 }, "data-source-file": "src/components/RedeemFlow.tsx", "data-source-line": "253", "data-source-span": "1", "data-editable-text": "true", children: "$600" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("small", { style: { fontSize: 10, opacity: 0.8 }, "data-source-file": "src/components/RedeemFlow.tsx", "data-source-line": "253", "data-source-span": "1", children: [
-                    selectedCrypto,
-                    " payout"
-                  ] })
-                ] })
-              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { className: "cnnctAprBtn", type: "button", style: { ...primaryButton, width: "100%", height: 58, boxShadow: "0 8px 20px rgba(5,167,125,.18)" }, "data-source-file": "src/components/RedeemFlow.tsx", "data-source-line": "251", "data-source-span": "1", children: "Connect Metamask" }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => moveToStep(3), style: { ...secondaryButton, width: "100%", height: 42, border: "none", color: MUTED }, "data-source-file": "src/components/RedeemFlow.tsx", "data-source-line": "255", "data-source-span": "1", "data-editable-text": "true", children: "Back to address details" })
             ] })
           ] }) })
